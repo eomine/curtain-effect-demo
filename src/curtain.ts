@@ -1,4 +1,4 @@
-import { clamp, isMobile } from "./utils";
+import { clamp, isMobile } from './utils';
 
 interface CurtainParams {
   overlayClass: string;
@@ -40,6 +40,7 @@ class Curtain {
     this.children.forEach((child, index) => {
       const overlay = document.createElement('div');
       overlay.classList.add(overlayClass);
+      // eslint-disable-next-line no-param-reassign
       child.style.zIndex = String(this.children.length - index);
       child.appendChild(overlay);
     });
@@ -65,6 +66,7 @@ class Curtain {
     let maxY = 0;
     this.children.forEach((child) => {
       const childHeight = child.scrollHeight;
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       const overlay = child.querySelector<HTMLElement>(`.${overlayClass}`)!;
 
       minY = maxY;
@@ -81,6 +83,7 @@ class Curtain {
         deltaY = minY - y;
       }
 
+      // eslint-disable-next-line no-param-reassign
       child.style.transform = `translateY(${deltaY}px)`;
       overlay.style.opacity = String(opacity);
     });
