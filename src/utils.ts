@@ -8,6 +8,6 @@ export function clamp(value: number, min: number, max: number): number {
   return value;
 }
 
-export function isMobile() {
+export function isMobile(): boolean {
   return window.matchMedia('(max-width: 576px)').matches;
 }
