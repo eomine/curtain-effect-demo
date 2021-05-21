@@ -15,3 +15,7 @@ A minimal implementation of the curtain effect, written in vanilla Typescript.
 ### Build
 
 `yarn build`
+
+### Run eslint
+
+`yarn lint`
