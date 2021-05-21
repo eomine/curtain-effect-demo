@@ -1,0 +1,33 @@
+html,
+body {
+  color: #03071e;
+  font-family: sans-serif;
+  font-size: 32px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+section:nth-child(1) {
+  background-color: #f6bd60;
+}
+
+section:nth-child(2) {
+  background-color: #f7ede2;
+}
+
+section:nth-child(3) {
+  background-color: #f5cac3;
+}
+
+section:nth-child(4) {
+  background-color: #84a59d;
+}
+
+section:nth-child(5) {
+  background-color: #f28482;
+}
+
+.contents {
+  padding: 200px 100px;
+}

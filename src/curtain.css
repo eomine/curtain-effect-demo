@@ -1,0 +1,45 @@
+.curtains {
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.curtain {
+  min-height: 100vh;
+  position: relative;
+}
+
+@media screen and (max-width: 575px) {
+  .curtain {
+    transform: none !important;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .curtain {
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: transform 0.1s;
+  }
+
+  .curtain:first-child {
+    /* prevents flash of content */
+    z-index: 2;
+  }
+}
+
+.curtain-overlay {
+  background-color: black;
+  content: '';
+  display: block;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
